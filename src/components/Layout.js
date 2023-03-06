@@ -1,14 +1,14 @@
 import Moviecard from "./Moviecard";
+import Search from "./Search";
 
 export default function Layout() {
 	return (
 		<>
 			<header>
-				<h1>Filmsøk</h1>
-                <span>Her skal det være en søkebar</span>
+				<h1>Another Movie Database</h1>
+                <Search />
 			</header>
 			<main>
-                <span>Her skal det være en liste med filmkort</span>
                 <Moviecard />
             </main>
             <footer><span>Footer</span></footer>
