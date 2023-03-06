@@ -1,18 +1,15 @@
+article {
+	max-width: 300px;
+	width: 100%;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
 
-
-article{
-    max-width: 300px;
-    width: 100%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-
-.poster{
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-    padding: 1rem;
+	.poster {
+		width: 100%;
+		max-width: 200px;
+		margin: 0 auto;
+		padding: 1rem;
+	}
 }
-}
-
