@@ -9,7 +9,7 @@ export default function Layout() {
                 <Search />
 			</header>
 			<main>
-                <Moviecard />
+                <Moviecard title="tittel" year="år" plot="et kort sammendrag av filmen" genre="sjanger" director="reggisør" actors="skusepillere" awards="priser"/>
             </main>
             <footer><span>Footer</span></footer>
 		</>
