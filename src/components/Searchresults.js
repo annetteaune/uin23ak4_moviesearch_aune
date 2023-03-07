@@ -14,7 +14,7 @@ export default function Searchresults({movieList}) {
 					year={mov.Year}
 					plot="Et kort sammendrag av filmen."
 					genre="sjanger"
-					director="reggisør"
+					director="regissør"
 					actors="skusepillere"
 					awards="priser"
 				/>
