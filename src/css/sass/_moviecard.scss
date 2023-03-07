@@ -1,15 +1,35 @@
-article {
-	max-width: 300px;
-	width: 100%;
-	border: 1px solid black;
+main {
 	display: flex;
-	flex-direction: column;
-	margin: 0 auto;
-
-	.poster {
+	flex-wrap: wrap;
+	gap: 1rem;
+	padding: 1rem;
+	article {
+		max-width: 450px;
 		width: 100%;
-		max-width: 200px;
+		border: 1px solid black;
+		display: flex;
+		flex-direction: row;
 		margin: 0 auto;
-		padding: 1rem;
+
+		.poster {
+			width: 100%;
+			max-width: 200px;
+			margin: 0 auto;
+			padding: 1rem;
+		}
+
+		.article-container {
+			display: flex;
+			flex-direction: column;
+			padding: 1rem 1rem 1rem 0;
+
+			.card-info{
+				font-weight: bold;
+				width: 50%;
+			}
+			.card-value{
+				width: 50%;
+			}
+		}
 	}
 }
