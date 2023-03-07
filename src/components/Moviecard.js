@@ -1,9 +1,9 @@
-export default function Moviecard({title,year, genre, director, actors, awards, plot}) {
-	// tittel, år publisert, sjanger, regissør, skuespillere og eventuelle priser i en fornuftig HTML-struktur.
+export default function Moviecard({title,year, genre, director, actors, awards, plot, image}) {
+	
 	return (
 		<article>
 			<img className="poster"
-				src="https://www.nomadfoods.com/wp-content/uploads/2018/08/placeholder-1-e1533569576673.png"
+				src={image}
 				alt=""
 			/>
 			<h3 className="movie-title">{title}</h3>
