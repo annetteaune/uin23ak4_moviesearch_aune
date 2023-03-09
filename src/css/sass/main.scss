@@ -1,5 +1,18 @@
 @import "moviecard";
 @import "footer";
+@import "header";
+
+
+body {
+	
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+html {
+	font-size: calc(1em + 1vw);
+} 
 
 @media (max-width: 768px){
     main{

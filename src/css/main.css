@@ -2,33 +2,44 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
+  margin: 0 2rem;
 }
 main article {
   max-width: 450px;
   width: 100%;
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
+  background-color: rgb(22, 22, 22);
+  border-radius: 5px;
 }
 main article .poster {
   width: 100%;
   max-width: 200px;
+  height: fit-content;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 main article .article-container {
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem 1rem 0;
+  padding: 0.2rem 0.2rem 0.2rem 0;
+}
+main article .article-container h3 {
+  font-size: 0.8rem;
 }
 main article .article-container .card-info {
+  font-size: 0.6rem;
   font-weight: bold;
   width: 50%;
 }
 main article .article-container .card-value {
+  font-size: 0.6rem;
   width: 50%;
+}
+main article .article-container .plot {
+  font-size: 0.6rem;
 }
 
 footer span {
@@ -36,6 +47,50 @@ footer span {
   display: flex;
   justify-content: center;
   padding: 1rem;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+header h1 {
+  margin: 0 auto;
+  font-size: 1rem;
+  padding-bottom: 0.3rem;
+}
+header form {
+  margin: 0 auto;
+}
+header form input {
+  width: 350px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: 2px solid rgb(133, 0, 0);
+}
+header form button {
+  font-size: 0.8rem;
+  padding: 0.1rem 0.3rem;
+  background-color: rgb(133, 0, 0);
+  border: 2px solid rgb(87, 0, 0);
+  border-radius: 5px;
+  margin-left: 10px;
+  color: white;
+}
+header form button:hover {
+  background-color: rgb(215, 0, 0);
+  text-decoration: underline;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+html {
+  font-size: calc(1em + 1vw);
 }
 
 @media (max-width: 768px) {

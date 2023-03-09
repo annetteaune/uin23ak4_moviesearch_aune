@@ -15,7 +15,7 @@ export default function Moviecard({
 			<div className="article-container">
 				<h3 className="movie-title">{title}</h3>
 				<span className="card-info">({year})</span>
-				<span>{plot}</span>
+				<span className="plot">{plot}</span>
 				<div>
 					<span className="card-info">Genre:</span>{" "}
 					<span className="card-value">{genre}</span>

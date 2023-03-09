@@ -6,13 +6,15 @@ export default function Layout({ movieList, setSearch, getMovies }) {
 		<>
 			<header>
 				<h1>Movie Database</h1>
-				<Search setSearch={setSearch} getMovies={getMovies}/>
+				<Search setSearch={setSearch} getMovies={getMovies} />
 			</header>
 			<main>
 				<Searchresults movieList={movieList} />
 			</main>
 			<footer>
-				<span>Footer</span>
+				<span>
+					footer
+				</span>
 			</footer>
 		</>
 	);
