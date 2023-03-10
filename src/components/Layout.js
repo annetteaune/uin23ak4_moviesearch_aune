@@ -1,20 +1,24 @@
+import { Outlet } from "react-router-dom";
 import Search from "./Search";
 import Searchresults from "./Searchresults";
+import { withRouter } from "react-router-dom";  
 
 export default function Layout({ movieList, setSearch, getMovies }) {
+	
 	return (
 		<>
 			<header>
-				<h1>Movie Database</h1>
+				<h1>
+					<i className="fa-solid fa-film"></i>Movie Database
+				</h1>
+
 				<Search setSearch={setSearch} getMovies={getMovies} />
 			</header>
 			<main>
-				<Searchresults movieList={movieList} />
+				<Outlet />
 			</main>
 			<footer>
-				<span>
-					footer
-				</span>
+				<span>Icons by FontAwesome - API by omdbapi.com</span>
 			</footer>
 		</>
 	);
