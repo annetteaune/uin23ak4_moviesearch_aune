@@ -5,7 +5,7 @@ export default function MoviePage({ selectedID, movie, getDetails }) {
 	useEffect(() => {
 		getDetails();
 	}, []);
-	console.log(movie);
+	//console.log(movie);
 
 	//placeholderbilde hvis poster ikke eksisterer
 	if (movie.Poster === "N/A") {
@@ -26,7 +26,7 @@ export default function MoviePage({ selectedID, movie, getDetails }) {
 
 					<ul>
 						<li>
-							<i class="fa-brands fa-imdb"></i> {movie.imdbRating}{" "}
+							<i className="fa-brands fa-imdb"></i> {movie.imdbRating}{" "}
 						</li>
 
 						<li className="card-value">

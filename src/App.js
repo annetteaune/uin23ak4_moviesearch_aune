@@ -55,6 +55,7 @@ function App() {
 						movieList={movieList}
 						setSearch={setSearch}
 						getMovies={getMovies}
+						search={search}
 					/>
 				}
 			>
