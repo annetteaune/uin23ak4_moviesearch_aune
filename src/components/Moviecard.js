@@ -19,10 +19,10 @@ export default function Moviecard({ title, year, image, id, setSelectedID }) {
 
 	return (
 		<article className="movie-card">
-			<h3 className="movie-title">
+			<h2 className="movie-title">
 				{title}
 				<span aria-label="release year"> ({year})</span>
-			</h3>
+			</h2>
 
 			<img className="poster" src={image} alt="" />
 			<Link to="/details">

@@ -4,34 +4,40 @@
 @import "header";
 @import "moviepage";
 
-
-  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Quicksand&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Quicksand&display=swap");
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-    font-size: 0.7rem;
+	font-size: 0.7rem;
 }
 
 body {
-	
-    font-family: "Dosis", Arial, Helvetica, sans-serif;
-    background-color: $backgroundcolor;
-    color: $fontcolor
+	font-family: "Dosis", Arial, Helvetica, sans-serif;
+	background-color: $backgroundcolor;
+	color: $fontcolor;
 }
 
 html {
 	font-size: calc(1em + 1vw);
-} 
-
-@media (max-width: 768px){
-    main{
-        article{
-            flex-direction: column;
-        }
-    }
 }
 
-
+@media (max-width: 768px) {
+	main {
+		article {
+			flex-direction: column;
+            justify-content: center;
+		}
+		.details-container {
+			flex-direction: column;
+            gap: 1rem;
+			ul {
+				margin: 0 auto !important ;
+			}
+			img {
+				margin: 0 auto !important ;
+			}
+		}
+	}
+}
