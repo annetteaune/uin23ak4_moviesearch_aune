@@ -100,6 +100,7 @@ header nav form input {
   border-radius: 5px;
   background-color: #f4f1de;
   color: black;
+  text-align: center;
 }
 header nav form button {
   font-size: 0.8rem;
@@ -120,6 +121,11 @@ header nav form button:hover {
 .fa-film {
   font-size: 1.85rem;
   color: #f2cc8f;
+}
+
+#alert {
+  text-align: center;
+  font-weight: 800;
 }
 
 .details-article {

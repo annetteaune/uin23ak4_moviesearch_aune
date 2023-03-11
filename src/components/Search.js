@@ -15,8 +15,10 @@ export default function Search({ setSearch, getMovies, search }) {
 	const handleClick = () => {
 		if (search.length >= 3) {
 			getMovies();
+			document.getElementById("alert").innerHTML = "";
 		} else {
-			alert("Enter at least 3 characters!");
+			document.getElementById("alert").innerHTML =
+				"Enter at least 3 characters.";
 		}
 	};
 
@@ -34,18 +36,21 @@ export default function Search({ setSearch, getMovies, search }) {
 		);
 	} else {
 		return (
-			<nav>
-				<form onSubmit={handleSubmit} id="search-bar">
-					<input
-						type="search"
-						placeholder="Type to search"
-						onChange={handleSearch}
-					/>
-					<button type="submit" onClick={handleClick}>
-						<i className="fa-solid fa-magnifying-glass"></i>
-					</button>
-				</form>
-			</nav>
+			<>
+				<nav>
+					<form onSubmit={handleSubmit} id="search-bar">
+						<input
+							type="search"
+							placeholder="Type to search"
+							onChange={handleSearch}
+						/>
+						<button type="submit" onClick={handleClick}>
+							<i className="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</nav>
+				<span id="alert"></span>{" "}
+			</>
 		);
 	}
 }

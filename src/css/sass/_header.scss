@@ -3,7 +3,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	
 
 	h1 {
 		margin: 0 auto;
@@ -13,6 +12,7 @@ header {
 	}
 	nav {
 		display: flex;
+
 		a {
 			margin: 0 auto;
 			.back-btn {
@@ -33,6 +33,7 @@ header {
 				border-radius: 5px;
 				background-color: $cardcolor;
 				color: black;
+				text-align: center;
 			}
 			button {
 				font-size: 0.8rem;
@@ -54,7 +55,12 @@ header {
 	}
 }
 
-.fa-film{
+.fa-film {
 	font-size: 1.85rem;
 	color: $hovercolor;
+}
+
+#alert {
+	text-align: center;
+	font-weight: 800;
 }
