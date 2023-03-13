@@ -3,13 +3,17 @@ header {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-
-	h1 {
+	.header-link {
 		margin: 0 auto;
-		font-size: 2rem;
+		text-decoration: none;
 		padding-bottom: 0.3rem;
 		font-variant: small-caps;
+		h1 {
+			font-size: 2rem;
+			color: black;
+		}
 	}
+
 	nav {
 		display: flex;
 

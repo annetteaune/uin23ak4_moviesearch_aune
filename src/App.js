@@ -14,10 +14,10 @@ function App() {
 	const [search, setSearch] = useState("james bond");
 
 	const getMovies = async () => {
-		const response = await fetch(
+		const apiresponse = await fetch(
 			`http://www.omdbapi.com/?s=${search}&apikey=8397fb15&Type=movie`
 		);
-		const data = await response.json();
+		const data = await apiresponse.json();
 		//console.log(data.Search);
 		setMovieList(data.Search);
 	};

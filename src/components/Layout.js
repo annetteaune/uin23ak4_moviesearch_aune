@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import Search from "./Search";
 
 
@@ -7,9 +7,11 @@ export default function Layout({ movieList, setSearch, getMovies, search }) {
 	return (
 		<>
 			<header>
-				<h1>
-					<i className="fa-solid fa-film"></i>Movie Database
-				</h1>
+				<Link to="/" className="header-link">
+					<h1>
+						<i className="fa-solid fa-film"></i>Movie Database
+					</h1>
+				</Link>
 
 				<Search setSearch={setSearch} getMovies={getMovies} search={search} />
 			</header>
