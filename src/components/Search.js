@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
@@ -8,8 +7,23 @@ export default function Search({ setSearch, getMovies, search }) {
 	};
 
 	const handleSearch = (event) => {
-		setSearch(event.target.value);
-		//console.log(event.target.value);
+		const inputValue = event.target.value;
+		/* Må her replace mellomrom med -, siden søkefunksjonen kræsjet ved mellomrom i søket. */
+		const crashProofValue = inputValue.replaceAll(" ", "-");
+		if (crashProofValue.length >= 3) {
+			setSearch(crashProofValue);
+
+			document.getElementById("alert").innerHTML = "";
+
+			console.log("search:", search);
+			console.log("target value:", crashProofValue);
+		} else {
+			document.getElementById("alert").innerHTML =
+				"Enter at least 3 characters.";
+
+			console.log("else-search:", search);
+			console.log("else-target value:", crashProofValue);
+		}
 	};
 
 	const handleClick = () => {

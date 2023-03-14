@@ -6,7 +6,6 @@ main {
 	justify-content: center;
 	max-width: 1200px;
 	margin: 0 auto;
-	
 
 	.movie-card {
 		max-width: 300px;
@@ -31,7 +30,7 @@ main {
 			width: 100%;
 			max-width: 200px;
 			height: fit-content;
-			
+
 			margin: 0.5rem auto;
 			border-radius: 5px;
 		}
@@ -56,4 +55,10 @@ main {
 			}
 		}
 	}
+}
+
+.no-match {
+	font-size: 1.2rem;
+	background: $hovercolor;
+	margin-bottom: 7rem;
 }

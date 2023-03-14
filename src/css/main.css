@@ -54,6 +54,12 @@ main .movie-card a .details-btn:hover {
   color: black;
 }
 
+.no-match {
+  font-size: 1.2rem;
+  background: #f2cc8f;
+  margin-bottom: 7rem;
+}
+
 footer {
   background-color: #f2cc8f;
 }
@@ -100,8 +106,9 @@ header nav form {
 }
 header nav form input {
   width: 371px;
-  font-size: 0.8rem;
-  border-radius: 5px;
+  font-size: 0.88rem;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   background-color: #f4f1de;
   color: black;
   text-align: center;
@@ -110,8 +117,8 @@ header nav form button {
   font-size: 0.8rem;
   padding: 0.1rem 0.3rem;
   background-color: #e07a5f;
-  border-radius: 5px;
-  margin-left: 10px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   color: white;
   border: none;
   box-shadow: 0px 1px 3px #5e8873;
