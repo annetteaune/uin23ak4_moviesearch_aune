@@ -1,18 +1,36 @@
-export default function Moviecard({title,year, genre, director, actors, awards, plot}) {
-	// tittel, år publisert, sjanger, regissør, skuespillere og eventuelle priser i en fornuftig HTML-struktur.
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+export default function Moviecard({ title, year, image, id, setSelectedID }) {
+
+
+	const saveID = (event) => {
+		setSelectedID(event.target.id);
+	};
+
+
+	//placeholderbilde hvis poster ikke eksisterer
+	if (image === "N/A"){
+		image = "https://placehold.jp/200x300.png";
+		
+	}else{
+		image=image
+	}
+
 	return (
-		<article>
-			<img className="poster"
-				src="https://www.nomadfoods.com/wp-content/uploads/2018/08/placeholder-1-e1533569576673.png"
-				alt=""
-			/>
-			<h3 className="movie-title">{title}</h3>
-			<span className="year">({year})</span>
-            <span className="plot">{plot}</span>
-			<span className="genre">Genre: {genre}</span>
-			<span className="director">Director: {director}</span>
-			<span className="actors">Actors: {actors}</span>
-			<span className="awards">Awards: {awards}</span>
+		<article className="movie-card">
+			<h2 className="movie-title">
+				{title}
+				<span aria-label="release year"> ({year})</span>
+			</h2>
+
+			<img className="poster" src={image} alt="" />
+			<Link to="/details">
+				<button id={id} className="details-btn" onClick={saveID}>
+					See details
+				</button>
+			</Link>
 		</article>
 	);
 }
+

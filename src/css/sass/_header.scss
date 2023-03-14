@@ -1,0 +1,71 @@
+header {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	.header-link {
+		margin: 0 auto;
+		text-decoration: none;
+		padding-bottom: 0.3rem;
+		font-variant: small-caps;
+		h1 {
+			font-size: 2rem;
+			color: black;
+		}
+	}
+
+	nav {
+		display: flex;
+
+		a {
+			margin: 0 auto;
+			.back-btn {
+				font-size: 0.8rem;
+				padding: 0.1rem 0.3rem;
+				background-color: $buttoncolor;
+				border-radius: 5px;
+				color: $buttontext;
+				border: none;
+				box-shadow: 0px 1px 3px #5e8873;
+			}
+		}
+		form {
+			margin: 0 auto;
+			input {
+				width: 371px;
+				font-size: 0.88rem;
+				border-top-left-radius:  15px;
+				border-bottom-left-radius: 15px;
+				background-color: $cardcolor;
+				color: black;
+				text-align: center;
+			}
+			button {
+				font-size: 0.8rem;
+				padding: 0.1rem 0.3rem;
+				background-color: $buttoncolor;
+				border-top-right-radius:  15px;
+				border-bottom-right-radius: 15px;
+				color: $buttontext;
+				border: none;
+				box-shadow: 0px 1px 3px #5e8873;
+
+				&:hover {
+					background-color: $hovercolor;
+					text-decoration: underline;
+					color: $fontcolor;
+				}
+			}
+		}
+	}
+}
+
+.fa-film {
+	font-size: 1.85rem;
+	color: $hovercolor;
+}
+
+#alert {
+	text-align: center;
+	font-weight: 800;
+}

@@ -1,0 +1,58 @@
+.details-article {
+	display: flex;
+	flex-direction: column;
+	background-color: $cardcolor;
+	border-radius: 5px;
+	gap: 1rem;
+
+	h2 {
+		text-align: center;
+		font-size: 1rem;
+		padding-top: 0.7rem;
+	}
+	span {
+		text-align: center;
+	}
+	.details-container {
+		display: flex;
+		justify-content: space-evenly;
+		max-width: 1000px;
+		width: 100%;
+		img {
+			width: 100%;
+			max-width: 350px;
+			height: fit-content;
+			margin: auto 1rem;
+			border-radius: 5px;
+		}
+
+		ul {
+			list-style: none;
+			line-height: 1.5rem;
+			max-width: 400px;
+			padding: 1rem;
+			background-color: white;
+			margin-right: 1rem;
+			border-radius: 5px;
+			height: fit-content;
+		}
+		.card-info {
+			font-weight: 700;
+			margin-right: 3px;
+		}
+	}
+}
+.plot {
+	max-width: 800px;
+	width: 80%;
+	padding: 1rem;
+	margin: 0 auto;
+	background-color: white;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+}
+
+.fa-imdb {
+	color: $fontcolor;
+	font-size: 1rem;
+}
