@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Quicksand&display=swap");
 main {
   display: flex;
   flex-wrap: wrap;
@@ -18,11 +18,14 @@ main .movie-card {
   border-radius: 5px;
 }
 main .movie-card h2 {
-  font-size: 0.8rem;
-  margin: 0;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  font-size: 0.85rem;
+  background: white;
+  border-radius: 5px;
+  width: 80%;
+  margin: 0.5rem auto 0 auto;
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
+  padding: 0.2rem;
 }
 main .movie-card h2 span {
   font-size: 0.6rem;
