@@ -8,21 +8,14 @@ export default function Search({ setSearch, getMovies, search }) {
 
 	const handleSearch = (event) => {
 		const inputValue = event.target.value;
-		/* Må her replace mellomrom med -, siden søkefunksjonen kræsjet ved mellomrom i søket. */
-		const crashProofValue = inputValue.replaceAll(" ", "-");
-		if (crashProofValue.length >= 3) {
-			setSearch(crashProofValue);
-
+		/* Må her replace mellomrom med -, siden søkefunksjonen kræsjer ved mellomrom i søket. */
+		const replacedValue = inputValue.replaceAll(" ", "-");
+		if (replacedValue.length >= 3) {
+			setSearch(replacedValue);
 			document.getElementById("alert").innerHTML = "";
-
-			console.log("search:", search);
-			console.log("target value:", crashProofValue);
 		} else {
 			document.getElementById("alert").innerHTML =
 				"Enter at least 3 characters.";
-
-			console.log("else-search:", search);
-			console.log("else-target value:", crashProofValue);
 		}
 	};
 
@@ -44,7 +37,9 @@ export default function Search({ setSearch, getMovies, search }) {
 		return (
 			<nav>
 				<Link to="/">
-					<button className="back-btn">Back to results</button>
+					<button className="back-btn">
+						<i class="fa-solid fa-chevron-left"></i> Back to results
+					</button>
 				</Link>
 			</nav>
 		);
@@ -55,10 +50,15 @@ export default function Search({ setSearch, getMovies, search }) {
 					<form onSubmit={handleSubmit} id="search-bar">
 						<input
 							type="search"
+							aria-label="search"
 							placeholder="Type to search"
 							onChange={handleSearch}
 						/>
-						<button type="submit" onClick={handleClick}>
+						<button
+							type="submit"
+							aria-label="search button"
+							onClick={handleClick}
+						>
 							<i className="fa-solid fa-magnifying-glass"></i>
 						</button>
 					</form>

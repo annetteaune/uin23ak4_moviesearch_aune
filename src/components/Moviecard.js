@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 
 export default function Moviecard({ title, year, image, id, setSelectedID }) {
 
-
 	const saveID = (event) => {
 		setSelectedID(event.target.id);
 	};
-
 
 	//placeholderbilde hvis poster ikke eksisterer
 	if (image === "N/A"){
@@ -21,7 +19,6 @@ export default function Moviecard({ title, year, image, id, setSelectedID }) {
 				{title}
 				<span aria-label="release year"> ({year})</span>
 			</h2>
-
 			<img className="poster" src={image} alt="" />
 			<Link to="/details">
 				<button id={id} className="details-btn" onClick={saveID}>

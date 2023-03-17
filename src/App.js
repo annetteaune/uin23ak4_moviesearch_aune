@@ -15,41 +15,37 @@ function App() {
 
 	const getMovies = async () => {
 		const apiresponse = await fetch(
-	/* Fikk tips om * for å returnere alt i søket, fra foreleser Akerbæk, står ikke noe om det i API-dokumentasjonen.*/
+			/* Fikk tips om * for å returnere alt i søket fra foreleser Akerbæk */
 			`http://www.omdbapi.com/?s=${search}*&apikey=8397fb15&Type=movie`
 		);
-		
+
 		const data = await apiresponse.json();
-		//console.log("data.search;",data.Search);
 		setMovieList(data.Search);
-		console.log("movielist:", movieList);
 	};
 
 	useEffect(() => {
 		getMovies();
+		/*Fikk en warning om missing dependency, fant workaround;
+			https://stackoverflow.com/questions/55840294/how-to-fix-missing-dependency-warning-when-using-useeffect-react-hook
+			*/
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [search]);
-	
-	
 
 	/*state for å lagre id, denne blir sendt nedover til moviecard, hvor den trigges ved klikk på knapp, og
 		henter unik id fra knappeelementet */
 	const [selectedID, setSelectedID] = useState("");
 
 	//State for å lagre detaljer om valgt film
-	const [movie, setMovie]=useState([])
+	const [movie, setMovie] = useState([]);
 
-	//sette opp nytt api-kall for å hente ut detaljer om film valgt via id 
-		const getDetails = async () => {
-			const apiresponse = await fetch(
-				`http://www.omdbapi.com/?i=${selectedID}&apikey=8397fb15`
-			);
-			const data = await apiresponse.json();
-			
-			setMovie(data);
-			//console.log(data)
-		};
-			
-		
+	//setter opp nytt api-kall for å hente ut detaljer om film valgt via id
+	const getDetails = async () => {
+		const apiresponse = await fetch(
+			`http://www.omdbapi.com/?i=${selectedID}&apikey=8397fb15`
+		);
+		const data = await apiresponse.json();
+		setMovie(data);
+	};
 
 	return (
 		<Routes>
@@ -75,11 +71,15 @@ function App() {
 						/>
 					}
 				/>
-				
+
 				<Route
 					path="/details"
 					element={
-						<MoviePage selectedID={selectedID} getDetails={getDetails} movie={movie}/>
+						<MoviePage
+							selectedID={selectedID}
+							getDetails={getDetails}
+							movie={movie}
+						/>
 					}
 				/>
 			</Route>

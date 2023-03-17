@@ -1,9 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import Search from "./Search";
 
-
 export default function Layout({ movieList, setSearch, getMovies, search }) {
-	
 	return (
 		<>
 			<header>
@@ -12,7 +10,6 @@ export default function Layout({ movieList, setSearch, getMovies, search }) {
 						<i className="fa-solid fa-film"></i>Movie Database
 					</h1>
 				</Link>
-
 				<Search setSearch={setSearch} getMovies={getMovies} search={search} />
 			</header>
 			<main>
