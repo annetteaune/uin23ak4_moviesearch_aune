@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 
 export default function Moviecard({ title, year, image, id, setSelectedID }) {
@@ -13,8 +13,6 @@ export default function Moviecard({ title, year, image, id, setSelectedID }) {
 	if (image === "N/A"){
 		image = "https://placehold.jp/200x300.png";
 		
-	}else{
-		image=image
 	}
 
 	return (

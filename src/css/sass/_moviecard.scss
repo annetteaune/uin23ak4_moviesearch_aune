@@ -15,6 +15,7 @@ main {
 		margin: 0 auto;
 		background-color: $cardcolor;
 		border-radius: 5px;
+		box-shadow: 3px 3px 5px #678e7b;
 		h2 {
 			font-size: 0.85rem;
 			background: white;
@@ -62,6 +63,9 @@ main {
 
 .no-match {
 	font-size: 1.2rem;
-	background: $hovercolor;
+	font-weight: 400;
+	background: $cardcolor;
 	margin-bottom: 7rem;
+	padding: 1rem;
+	border-radius: 15px;
 }

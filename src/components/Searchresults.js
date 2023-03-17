@@ -15,6 +15,6 @@ export default function Searchresults({ movieList, setSelectedID }) {
 			/>
 		));
 	} else {
-		return <h3 className="no-match">No matches, check your spelling!</h3>;
+		return <h3 className="no-match">No matches - check your spelling</h3>;
 	}
 }

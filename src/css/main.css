@@ -16,6 +16,7 @@ main .movie-card {
   margin: 0 auto;
   background-color: #f4f1de;
   border-radius: 5px;
+  box-shadow: 3px 3px 5px #678e7b;
 }
 main .movie-card h2 {
   font-size: 0.85rem;
@@ -59,8 +60,11 @@ main .movie-card a .details-btn:hover {
 
 .no-match {
   font-size: 1.2rem;
-  background: #f2cc8f;
+  font-weight: 400;
+  background: #f4f1de;
   margin-bottom: 7rem;
+  padding: 1rem;
+  border-radius: 15px;
 }
 
 footer {
@@ -86,8 +90,9 @@ header .header-link {
   font-variant: small-caps;
 }
 header .header-link h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: black;
+  font-weight: 300;
 }
 header nav {
   display: flex;
@@ -116,6 +121,11 @@ header nav form input {
   color: black;
   text-align: center;
 }
+header nav form input:focus {
+  background-color: white;
+  outline: none;
+  border-color: #e07a5f;
+}
 header nav form button {
   font-size: 0.8rem;
   padding: 0.1rem 0.3rem;
@@ -133,13 +143,15 @@ header nav form button:hover {
 }
 
 .fa-film {
-  font-size: 1.85rem;
+  font-size: 2.25rem;
   color: #f2cc8f;
 }
 
 #alert {
+  padding-top: 0.1rem;
   text-align: center;
-  font-weight: 800;
+  font-weight: 500;
+  font-size: 0.8rem;
 }
 
 .details-article {
